@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <style>
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Layout helpers */
+    .container { width: min(1100px, 90%); margin-inline: auto; }
+
+    /* Header / Nav */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav a:hover { color: #0066ff; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #0066ff;
+      color: #fff;
+      border-radius: 6px;
+    }
+    .btn:hover { background: #0052cc; }
+
+    /* Cards section */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 4rem 0;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="container">
+      <strong>Brand</strong>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Welcome to My Site</h1>
+    <p>A simple, responsive starting point for your project.</p>
+    <a href="#about" class="btn">Get Started</a>
+  </section>
+
+  <main class="container">
+    <section class="cards" id="about">
+      <div class="card">
+        <h3>Feature One</h3>
+        <p>Replace this text with something about what your site offers.</p>
+      </div>
+      <div class="card">
+        <h3>Feature Two</h3>
+        <p>Cards auto-stack on small screens thanks to CSS Grid.</p>
+      </div>
+      <div class="card">
+        <h3>Feature Three</h3>
+        <p>Edit colors by changing the hex values in the CSS above.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
